@@ -1,34 +1,20 @@
-import java.util.Random;
-public class EquationReles extends Equation3{
-	int first=0;
-	int second=0;
-	final int chars=0;
-	
-	public  void init(){//定义方法init
-		Random r=new Random();
-		first=r.nextInt(101);
-		second=r.nextInt(101);
+class EquationReles extends Equation{
+	public int getFirst(){
+		return super.getFirst();
 	}
-	
-	public int getFirst(){//定义方法getFirst
-		return first;
+	public  int getSecond(){
+		return super.getSecond();
 	}
-	
-	public  int getSecond(){//定义方法getSecond
-		return second;
+	public  char getChars(){
+		return super.getChars();
 	}
-	
-	public  int getChars(){//定义方法getChars
-		return chars;
+	public String toString(){
+		return super.toString();
 	}
-	
-	public String getMe(){//定义方法getMe
-		return ""+first+"-"+second;
-	}
-	
 	public  int getAnswer(){
-		return first-second;
+		return super.getAnswer();
+	}
+	public void setEquation(int value1,int value2) {
+		super.setEquation(value1, value2, '-');;
 	}
 }
-
-
